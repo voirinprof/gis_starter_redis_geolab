@@ -1,0 +1,16 @@
+{
+    "name": "Redis Python Dev",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "python",
+    "workspaceFolder": "/workspaces/gis_starter_redis_geolab",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ]
+      }
+    },
+    "forwardPorts": [6379, 5540],
+    "postCreateCommand": "pip install --upgrade pip && pip install -r .devcontainer/requirements.txt"
+  }
